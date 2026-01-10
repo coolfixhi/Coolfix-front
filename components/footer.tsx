@@ -1,6 +1,6 @@
 "use client"
 
-import { Snowflake, Mail, Facebook, MessageCircle } from "lucide-react"
+import { Mail, Facebook, MessageCircle } from "lucide-react"
 import type { TranslationKey } from "@/lib/translations"
 
 interface FooterProps {
@@ -32,10 +32,11 @@ export function Footer({ t }: FooterProps) {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <div className="mb-4 flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <Snowflake className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-2xl font-bold">COOLFIX</span>
+              <img 
+                src="/img/LogoCoolfix.svg" 
+                alt="COOLFIX" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-sm text-gray-400">{t.footer.description}</p>
           </div>

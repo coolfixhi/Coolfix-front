@@ -28,7 +28,7 @@ export function HoursSection({ t }: HoursSectionProps) {
   ]
 
   return (
-    <section id="horario" className="bg-gradient-to-br from-red-50 to-white py-20">
+    <section id="horario" className="bg-gradient-to-b from-white to-gray-50 py-20">
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-balance text-3xl font-bold text-foreground md:text-4xl">{t.hours.title}</h2>

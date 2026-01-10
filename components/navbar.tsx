@@ -5,7 +5,7 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { LanguageToggle } from "./language-toggle"
-import { Menu, X, Snowflake } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import type { TranslationKey } from "@/lib/translations"
 
 interface NavbarProps {
@@ -86,10 +86,11 @@ export function Navbar({ t, lang, onLanguageToggle }: NavbarProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-              <Snowflake className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-xl sm:text-2xl font-bold text-primary">COOLFIX</span>
+            <img 
+              src="/img/LogoCoolfix.svg" 
+              alt="COOLFIX" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

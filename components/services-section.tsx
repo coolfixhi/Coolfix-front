@@ -53,7 +53,7 @@ export function ServicesSection({ t }: ServicesSectionProps) {
         id: "airConditioning",
         title: t.services.airConditioning.title,
         description: t.services.airConditioning.description,
-        image: "/air-conditioner.jpg"
+        image: "/img/ULT.jpeg"
       }]
     }
     
@@ -76,7 +76,7 @@ export function ServicesSection({ t }: ServicesSectionProps) {
         id: "commercial-refrigeration",
         title: t.services.commercial.refrigeration.title,
         description: t.services.commercial.refrigeration.description,
-        image: "/commercial-refrigerator.png"
+        image: "/img/LC1.jpeg"
       }]
     }
 
@@ -87,25 +87,25 @@ export function ServicesSection({ t }: ServicesSectionProps) {
           id: "domestic-kitchen",
           title: t.services.domestic.kitchen.title,
           description: t.services.domestic.kitchen.description,
-          image: "/kitchen-stove.png"
+          image: "/img/LD2.jpeg"
         },
         {
           id: "domestic-gas",
           title: t.services.domestic.gas.title,
           description: t.services.domestic.gas.description,
-          image: "/water-heater.jpg"
+          image: "/img/LD4.jpeg"
         },
         {
           id: "domestic-laundry",
           title: t.services.domestic.laundry.title,
           description: t.services.domestic.laundry.description,
-          image: "/modern-washing-machine.png"
+          image: "/img/LD1.jpeg"
         },
         {
           id: "domestic-refrigeration",
           title: t.services.domestic.refrigeration.title,
           description: t.services.domestic.refrigeration.description,
-          image: "/home-refrigerator.jpg"
+          image: "/img/LD3.jpeg"
         }
       ]
     }
@@ -117,13 +117,13 @@ export function ServicesSection({ t }: ServicesSectionProps) {
           id: "industrial-laundry",
           title: t.services.industrial.laundry.title,
           description: t.services.industrial.laundry.description,
-          image: "/industrial-washer.jpg"
+          image: "/img/LI1.jpeg"
         },
         {
           id: "industrial-refrigeration",
           title: t.services.industrial.refrigeration.title,
           description: t.services.industrial.refrigeration.description,
-          image: "/cold-room-industrial.jpg"
+          image: "/img/LI2.jpeg"
         }
       ]
     }
