@@ -2,75 +2,146 @@
 
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
-import { Snowflake, Wrench, Factory, Home, ChevronRight } from "lucide-react"
+import { Snowflake, Wrench, Factory, Home, ChevronRight, Wind } from "lucide-react"
 import type { TranslationKey } from "@/lib/translations"
 
 interface ServicesSectionProps {
   t: TranslationKey
 }
 
-const appliancesByCategory = {
-  commercial: [
-    { name: "Heladeras Comerciales", image: "/commercial-refrigerator.png" },
-    { name: "Heladoras Horizontal", image: "/horizontal-freezer.jpg" },
-    { name: "Heladoras Vertical", image: "/vertical-freezer.jpg" },
-    { name: "Vitrinas Refrigeradas", image: "/display-cooler.jpg" },
-  ],
-  domestic: [
-    { name: "Lavadoras", image: "/modern-washing-machine.png" },
-    { name: "Secadoras", image: "/dryer-machine.jpg" },
-    { name: "Refrigeradores", image: "/home-refrigerator.jpg" },
-    { name: "Cocinas", image: "/kitchen-stove.png" },
-    { name: "Campanas Extractoras", image: "/range-hood.jpg" },
-    { name: "Trituradoras", image: "/garbage-disposal.png" },
-  ],
-  industrial: [
-    { name: "Cámaras Frías", image: "/cold-room-industrial.jpg" },
-    { name: "Sistemas de Refrigeración", image: "/refrigeration-system.jpg" },
-    { name: "Congeladores Industriales", image: "/industrial-freezer.jpg" },
-    { name: "Equipos de Climatización", image: "/hvac-equipment.png" },
-  ],
-  preventive: [
-    { name: "Inspección General", image: "/equipment-inspection.jpg" },
-    { name: "Limpieza de Sistemas", image: "/system-cleaning.jpg" },
-    { name: "Revisión de Componentes", image: "/component-check.jpg" },
-    { name: "Calibración", image: "/equipment-calibration.jpg" },
-  ],
-}
-
 export function ServicesSection({ t }: ServicesSectionProps) {
-  const [selectedCategory, setSelectedCategory] = useState<string>("commercial")
+  const [selectedCategory, setSelectedCategory] = useState<string>("airConditioning")
+  const [hoveredItem, setHoveredItem] = useState<number | null>(null)
 
   const serviceCategories = [
+    {
+      id: "airConditioning",
+      title: t.services.airConditioning.title,
+      description: t.services.airConditioning.description,
+      icon: Wind,
+    },
     {
       id: "commercial",
       title: t.services.commercial.title,
       description: t.services.commercial.description,
       icon: Factory,
-      color: "bg-blue-500",
     },
     {
       id: "domestic",
       title: t.services.domestic.title,
       description: t.services.domestic.description,
       icon: Home,
-      color: "bg-blue-600",
     },
     {
       id: "industrial",
       title: t.services.industrial.title,
       description: t.services.industrial.description,
       icon: Snowflake,
-      color: "bg-blue-700",
     },
     {
       id: "preventive",
       title: t.services.preventive.title,
       description: t.services.preventive.description,
       icon: Wrench,
-      color: "bg-blue-800",
     },
   ]
+
+  // Función para obtener todas las tarjetas a mostrar (sin subcategorías)
+  const getDisplayServices = () => {
+    if (selectedCategory === "airConditioning") {
+      return [{
+        id: "airConditioning",
+        title: t.services.airConditioning.title,
+        description: t.services.airConditioning.description,
+        image: "/air-conditioner.jpg"
+      }]
+    }
+    
+    if (selectedCategory === "preventive") {
+      // Para mantenimiento preventivo, mostrar todas las tarjetas existentes
+      return t.services.preventive.items.map((item, index) => ({
+        id: `preventive-${index}`,
+        title: item.name,
+        description: item.description,
+        image: index === 0 ? "/equipment-inspection.jpg" : 
+               index === 1 ? "/system-cleaning.jpg" : 
+               index === 2 ? "/component-check.jpg" : 
+               "/equipment-calibration.jpg"
+      }))
+    }
+
+    // Para Línea Comercial, mostrar todas las subcategorías
+    if (selectedCategory === "commercial") {
+      return [{
+        id: "commercial-refrigeration",
+        title: t.services.commercial.refrigeration.title,
+        description: t.services.commercial.refrigeration.description,
+        image: "/commercial-refrigerator.png"
+      }]
+    }
+
+    // Para Línea Doméstica, mostrar todas las subcategorías
+    if (selectedCategory === "domestic") {
+      return [
+        {
+          id: "domestic-kitchen",
+          title: t.services.domestic.kitchen.title,
+          description: t.services.domestic.kitchen.description,
+          image: "/kitchen-stove.png"
+        },
+        {
+          id: "domestic-gas",
+          title: t.services.domestic.gas.title,
+          description: t.services.domestic.gas.description,
+          image: "/water-heater.jpg"
+        },
+        {
+          id: "domestic-laundry",
+          title: t.services.domestic.laundry.title,
+          description: t.services.domestic.laundry.description,
+          image: "/modern-washing-machine.png"
+        },
+        {
+          id: "domestic-refrigeration",
+          title: t.services.domestic.refrigeration.title,
+          description: t.services.domestic.refrigeration.description,
+          image: "/home-refrigerator.jpg"
+        }
+      ]
+    }
+
+    // Para Línea Industrial, mostrar todas las subcategorías
+    if (selectedCategory === "industrial") {
+      return [
+        {
+          id: "industrial-laundry",
+          title: t.services.industrial.laundry.title,
+          description: t.services.industrial.laundry.description,
+          image: "/industrial-washer.jpg"
+        },
+        {
+          id: "industrial-refrigeration",
+          title: t.services.industrial.refrigeration.title,
+          description: t.services.industrial.refrigeration.description,
+          image: "/cold-room-industrial.jpg"
+        }
+      ]
+    }
+
+    return []
+  }
+
+  const getCurrentTitle = () => {
+    const category = serviceCategories.find((c) => c.id === selectedCategory)
+    return category?.title || ""
+  }
+
+  const getCurrentDescription = () => {
+    const category = serviceCategories.find((c) => c.id === selectedCategory)
+    return category?.description || ""
+  }
+
+  const displayServices = getDisplayServices()
 
   return (
     <section id="servicios" className="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-20">
@@ -83,9 +154,9 @@ export function ServicesSection({ t }: ServicesSectionProps) {
         </div>
 
         <div className="mb-10">
-          <div className="relative mx-auto max-w-4xl">
-            {/* Contenedor de tabs con fondo */}
-            <div className="relative flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2 sm:gap-1 rounded-xl bg-muted/50 p-1.5 sm:p-2 backdrop-blur-sm border border-border/50 shadow-inner">
+          <div className="relative mx-auto max-w-5xl px-4">
+            {/* Contenedor de tabs principales */}
+            <div className="relative flex flex-nowrap items-center justify-center gap-1.5 rounded-lg bg-background/80 p-1.5 border border-border/40 shadow-sm">
               {serviceCategories.map((service, index) => {
                 const isActive = selectedCategory === service.id
                 return (
@@ -93,16 +164,17 @@ export function ServicesSection({ t }: ServicesSectionProps) {
                     key={service.id}
                     onClick={() => setSelectedCategory(service.id)}
                     className={`
-                      group relative flex items-center justify-center gap-2 sm:gap-2.5
-                      px-4 sm:px-6 py-3 sm:py-3.5
-                      rounded-lg font-semibold text-sm sm:text-base
+                      group relative flex items-center justify-center gap-1.5
+                      px-3 py-2
+                      rounded-md font-medium text-xs sm:text-sm
                       transition-all duration-300 ease-out
-                      w-full sm:w-auto sm:flex-1
+                      flex-shrink-0
                       overflow-hidden cursor-pointer
+                      whitespace-nowrap
                       ${
                         isActive
-                          ? "text-primary-foreground shadow-lg scale-[1.02]"
-                          : "text-muted-foreground hover:text-foreground hover:bg-background/50"
+                          ? "text-primary-foreground shadow-md"
+                          : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
                       }
                     `}
                     style={{
@@ -111,35 +183,25 @@ export function ServicesSection({ t }: ServicesSectionProps) {
                   >
                     {/* Fondo animado para el tab activo */}
                     {isActive && (
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90 rounded-lg shadow-md opacity-0 animate-[fadeIn_0.3s_ease-out_forwards]" />
+                      <div className="absolute inset-0 bg-primary rounded-md shadow-sm" />
                     )}
-                    
-                    {/* Efecto de brillo en hover */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full" />
                     
                     {/* Contenido del tab */}
-                    <div className="relative z-10 flex items-center gap-2 sm:gap-2.5">
+                    <div className="relative z-10 flex items-center gap-1.5">
                       <service.icon 
-                        className={`h-5 w-5 shrink-0 transition-all duration-300 ${
-                          isActive 
-                            ? "text-primary-foreground scale-110" 
-                            : "text-muted-foreground group-hover:text-primary group-hover:scale-110"
-                        }`} 
-                      />
-                      <span className="whitespace-nowrap">{service.title}</span>
-                      <ChevronRight
                         className={`h-4 w-4 shrink-0 transition-all duration-300 ${
                           isActive 
-                            ? "rotate-90 text-primary-foreground opacity-100" 
-                            : "rotate-0 opacity-0 group-hover:opacity-50"
-                        }`}
+                            ? "text-primary-foreground" 
+                            : "text-muted-foreground group-hover:text-foreground"
+                        }`} 
                       />
+                      <span>{service.title}</span>
+                      {isActive && (
+                        <ChevronRight
+                          className="h-3 w-3 shrink-0 text-primary-foreground rotate-90 opacity-70"
+                        />
+                      )}
                     </div>
-                    
-                    {/* Indicador inferior animado */}
-                    {isActive && (
-                      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-0.5 bg-primary-foreground/30 rounded-full" />
-                    )}
                   </button>
                 )
               })}
@@ -148,7 +210,7 @@ export function ServicesSection({ t }: ServicesSectionProps) {
             {/* Descripción de la categoría seleccionada */}
             <div className="mt-4 text-center">
               <p className="text-sm sm:text-base text-muted-foreground animate-[fadeInUp_0.4s_ease-out]">
-                {serviceCategories.find((s) => s.id === selectedCategory)?.description}
+                {getCurrentDescription()}
               </p>
             </div>
           </div>
@@ -156,34 +218,50 @@ export function ServicesSection({ t }: ServicesSectionProps) {
 
         <div className="rounded-2xl bg-white p-4 sm:p-6 md:p-8 shadow-xl">
           <h3 className="mb-6 sm:mb-8 text-center text-xl sm:text-2xl font-bold text-foreground">
-            {serviceCategories.find((s) => s.id === selectedCategory)?.title}
+            {getCurrentTitle()}
           </h3>
           <div className="grid gap-4 sm:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {appliancesByCategory[selectedCategory as keyof typeof appliancesByCategory].map((appliance, index) => (
-              <Card
-                key={index}
-                className="group cursor-pointer overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-lg"
-                style={{
-                  animation: "fadeInUp 0.5s ease-out",
-                  animationDelay: `${index * 0.1}s`,
-                  animationFillMode: "both",
-                }}
-              >
-                <div className="relative aspect-square overflow-hidden bg-gray-100">
-                  <img
-                    src={appliance.image || "/placeholder.svg"}
-                    alt={appliance.name}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                </div>
-                <div className="p-3 sm:p-4 text-center">
-                  <h4 className="text-balance font-semibold text-sm sm:text-base text-foreground group-hover:text-primary">
-                    {appliance.name}
-                  </h4>
-                </div>
-              </Card>
-            ))}
+            {displayServices.map((service, index) => {
+              const isHovered = hoveredItem === index
+              return (
+                <Card
+                  key={service.id}
+                  className="group cursor-pointer overflow-visible border-2 transition-all duration-300 hover:border-primary hover:shadow-lg"
+                  style={{
+                    animation: "fadeInUp 0.5s ease-out",
+                    animationDelay: `${index * 0.1}s`,
+                    animationFillMode: "both",
+                  }}
+                  onMouseEnter={() => setHoveredItem(index)}
+                  onMouseLeave={() => setHoveredItem(null)}
+                >
+                  <div className="relative aspect-square overflow-hidden bg-gray-100">
+                    <img
+                      src={service.image || "/placeholder.svg"}
+                      alt={service.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  </div>
+                  <div className="p-3 sm:p-4 text-center">
+                    <h4 className="text-balance font-semibold text-sm sm:text-base text-foreground group-hover:text-primary transition-colors mb-2">
+                      {service.title}
+                    </h4>
+                    {/* Texto descriptivo que aparece debajo de la imagen */}
+                    <div
+                      className={`
+                        overflow-hidden transition-all duration-300 ease-in-out
+                        ${isHovered ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0 mt-0"}
+                      `}
+                    >
+                      <p className="text-sm text-muted-foreground text-left leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              )
+            })}
           </div>
         </div>
       </div>

@@ -18,31 +18,203 @@ export const translations = {
     services: {
       title: "Nuestros Servicios",
       subtitle: "Soluciones completas para todos sus equipos",
+      airConditioning: {
+        title: "Aire Acondicionado",
+        description: "Mantenimiento, reparación e instalación de aires acondicionados",
+        items: [
+          {
+            name: "Aire Acondicionado",
+            description: "Mantenimiento, reparación e instalación de aires acondicionados",
+          },
+        ],
+      },
       commercial: {
         title: "Línea Comercial",
-        description: "Equipos para negocios",
-        items: ["Heladeras", "Heladoras Horizontal", "Heladoras Vertical"],
+        description: "Equipos comerciales de refrigeración",
+        refrigeration: {
+          title: "Refrigeración Comercial",
+          description: "Mantenimiento y reparación de dispensadores de agua, granizadoras, heladeras, máquinas de gelato, neveras de exhibición",
+          items: [
+            {
+              name: "Dispensadores de Agua",
+              description: "Mantenimiento y reparación de dispensadores de agua",
+            },
+            {
+              name: "Granizadoras",
+              description: "Mantenimiento y reparación de granizadoras",
+            },
+            {
+              name: "Heladeras Comerciales",
+              description: "Mantenimiento y reparación de heladeras comerciales",
+            },
+            {
+              name: "Máquinas de Gelato",
+              description: "Mantenimiento y reparación de máquinas de gelato",
+            },
+            {
+              name: "Neveras de Exhibición",
+              description: "Mantenimiento y reparación de neveras de exhibición",
+            },
+          ],
+        },
       },
       domestic: {
         title: "Línea Doméstica",
         description: "Electrodomésticos del hogar",
-        items: [
-          "Lavandería Doméstica",
-          "Lavadoras y Secadoras",
-          "Gasodomésticos",
-          "Cocinas y Campanas Extractoras",
-          "Trituradoras",
-        ],
+        kitchen: {
+          title: "Cocina",
+          description: "Mantenimiento, reparación e instalación de campanas extractoras, estufas, hornos, hornos microondas, lavavajillas, trituradores",
+          items: [
+            {
+              name: "Campanas Extractoras",
+              description: "Mantenimiento, reparación e instalación de campanas extractoras",
+            },
+            {
+              name: "Estufas",
+              description: "Mantenimiento, reparación e instalación de estufas",
+            },
+            {
+              name: "Hornos",
+              description: "Mantenimiento, reparación e instalación de hornos",
+            },
+            {
+              name: "Hornos Microondas",
+              description: "Mantenimiento, reparación e instalación de hornos microondas",
+            },
+            {
+              name: "Lavavajillas",
+              description: "Mantenimiento, reparación e instalación de lavavajillas",
+            },
+            {
+              name: "Trituradores",
+              description: "Mantenimiento, reparación e instalación de trituradores",
+            },
+          ],
+        },
+        gas: {
+          title: "Gasodomésticos",
+          description: "Mantenimiento, reparación e instalación de calentadores de agua: de paso, eléctricos, a gas y de acumulación",
+          items: [
+            {
+              name: "Calentadores de Paso",
+              description: "Mantenimiento, reparación e instalación de calentadores de agua de paso",
+            },
+            {
+              name: "Calentadores Eléctricos",
+              description: "Mantenimiento, reparación e instalación de calentadores eléctricos",
+            },
+            {
+              name: "Calentadores a Gas",
+              description: "Mantenimiento, reparación e instalación de calentadores a gas",
+            },
+            {
+              name: "Calentadores de Acumulación",
+              description: "Mantenimiento, reparación e instalación de calentadores de acumulación",
+            },
+          ],
+        },
+        laundry: {
+          title: "Lavandería",
+          description: "Mantenimiento, reparación e instalación de lavadoras y secadoras. Venta de repuestos y accesorios",
+          items: [
+            {
+              name: "Lavadoras",
+              description: "Mantenimiento, reparación e instalación de lavadoras. Venta de repuestos y accesorios",
+            },
+            {
+              name: "Secadoras",
+              description: "Mantenimiento, reparación e instalación de secadoras. Venta de repuestos y accesorios",
+            },
+          ],
+        },
+        refrigeration: {
+          title: "Refrigeración Doméstica",
+          description: "Mantenimiento, reparación e instalación de neveras y nevecones. Venta de accesorios y repuestos",
+          items: [
+            {
+              name: "Neveras",
+              description: "Mantenimiento, reparación e instalación de neveras. Venta de accesorios y repuestos",
+            },
+            {
+              name: "Nevecones",
+              description: "Mantenimiento, reparación e instalación de nevecones. Venta de accesorios y repuestos",
+            },
+          ],
+        },
       },
       industrial: {
         title: "Línea Industrial",
         description: "Equipos industriales",
-        items: ["Refrigeración Industrial", "Cámaras Frías", "Equipos Comerciales"],
+        laundry: {
+          title: "Lavandería Industrial",
+          description: "Mantenimiento y reparación de equipos de lavandería industrial: lavadoras y secadoras",
+          items: [
+            {
+              name: "Lavadoras Industriales",
+              description: "Mantenimiento y reparación de lavadoras industriales",
+            },
+            {
+              name: "Secadoras Industriales",
+              description: "Mantenimiento y reparación de secadoras industriales",
+            },
+          ],
+        },
+        refrigeration: {
+          title: "Refrigeración Industrial",
+          description: "Mantenimiento y reparación de equipos de refrigeración industrial: cuartos fríos, cavas, túneles de congelación, vitrinas industriales, congeladores, chillers y máquinas de hielo",
+          items: [
+            {
+              name: "Cuartos Fríos",
+              description: "Mantenimiento y reparación de cuartos fríos",
+            },
+            {
+              name: "Cavas",
+              description: "Mantenimiento y reparación de cavas",
+            },
+            {
+              name: "Túneles de Congelación",
+              description: "Mantenimiento y reparación de túneles de congelación",
+            },
+            {
+              name: "Vitrinas Industriales",
+              description: "Mantenimiento y reparación de vitrinas industriales",
+            },
+            {
+              name: "Congeladores Industriales",
+              description: "Mantenimiento y reparación de congeladores industriales",
+            },
+            {
+              name: "Chillers",
+              description: "Mantenimiento y reparación de chillers",
+            },
+            {
+              name: "Máquinas de Hielo",
+              description: "Mantenimiento y reparación de máquinas de hielo",
+            },
+          ],
+        },
       },
       preventive: {
         title: "Mantenimiento Preventivo",
-        description: "Planes de mantenimiento",
-        items: ["Mantenimiento General", "Reparaciones", "Servicio de Emergencia"],
+        description: "Planes de mantenimiento para mantener sus equipos en óptimas condiciones",
+        items: [
+          {
+            name: "Inspección General",
+            description: "Revisión completa de sus equipos para detectar problemas a tiempo",
+          },
+          {
+            name: "Limpieza de Sistemas",
+            description: "Limpieza profunda de sistemas de refrigeración y ventilación",
+          },
+          {
+            name: "Revisión de Componentes",
+            description: "Inspección detallada de componentes críticos",
+          },
+          {
+            name: "Calibración",
+            description: "Ajuste y calibración de equipos para máximo rendimiento",
+          },
+        ],
       },
     },
     why: {
@@ -138,31 +310,203 @@ export const translations = {
     services: {
       title: "Our Services",
       subtitle: "Complete solutions for all your equipment",
+      airConditioning: {
+        title: "Air Conditioning",
+        description: "Maintenance, repair and installation of air conditioners",
+        items: [
+          {
+            name: "Air Conditioning",
+            description: "Maintenance, repair and installation of air conditioners",
+          },
+        ],
+      },
       commercial: {
         title: "Commercial Line",
-        description: "Business equipment",
-        items: ["Refrigerators", "Horizontal Freezers", "Vertical Freezers"],
+        description: "Commercial refrigeration equipment",
+        refrigeration: {
+          title: "Commercial Refrigeration",
+          description: "Maintenance and repair of water dispensers, slush machines, freezers, gelato machines, display coolers",
+          items: [
+            {
+              name: "Water Dispensers",
+              description: "Maintenance and repair of water dispensers",
+            },
+            {
+              name: "Slush Machines",
+              description: "Maintenance and repair of slush machines",
+            },
+            {
+              name: "Commercial Freezers",
+              description: "Maintenance and repair of commercial freezers",
+            },
+            {
+              name: "Gelato Machines",
+              description: "Maintenance and repair of gelato machines",
+            },
+            {
+              name: "Display Coolers",
+              description: "Maintenance and repair of display coolers",
+            },
+          ],
+        },
       },
       domestic: {
         title: "Domestic Line",
         description: "Home appliances",
-        items: [
-          "Domestic Laundry",
-          "Washers and Dryers",
-          "Gas Appliances",
-          "Stoves and Range Hoods",
-          "Garbage Disposals",
-        ],
+        kitchen: {
+          title: "Kitchen",
+          description: "Maintenance, repair and installation of range hoods, stoves, ovens, microwave ovens, dishwashers, garbage disposals",
+          items: [
+            {
+              name: "Range Hoods",
+              description: "Maintenance, repair and installation of range hoods",
+            },
+            {
+              name: "Stoves",
+              description: "Maintenance, repair and installation of stoves",
+            },
+            {
+              name: "Ovens",
+              description: "Maintenance, repair and installation of ovens",
+            },
+            {
+              name: "Microwave Ovens",
+              description: "Maintenance, repair and installation of microwave ovens",
+            },
+            {
+              name: "Dishwashers",
+              description: "Maintenance, repair and installation of dishwashers",
+            },
+            {
+              name: "Garbage Disposals",
+              description: "Maintenance, repair and installation of garbage disposals",
+            },
+          ],
+        },
+        gas: {
+          title: "Gas Appliances",
+          description: "Maintenance, repair and installation of water heaters: tankless, electric, gas and storage",
+          items: [
+            {
+              name: "Tankless Water Heaters",
+              description: "Maintenance, repair and installation of tankless water heaters",
+            },
+            {
+              name: "Electric Water Heaters",
+              description: "Maintenance, repair and installation of electric water heaters",
+            },
+            {
+              name: "Gas Water Heaters",
+              description: "Maintenance, repair and installation of gas water heaters",
+            },
+            {
+              name: "Storage Water Heaters",
+              description: "Maintenance, repair and installation of storage water heaters",
+            },
+          ],
+        },
+        laundry: {
+          title: "Laundry",
+          description: "Maintenance, repair and installation of washers and dryers. Parts and accessories sales",
+          items: [
+            {
+              name: "Washers",
+              description: "Maintenance, repair and installation of washers. Parts and accessories sales",
+            },
+            {
+              name: "Dryers",
+              description: "Maintenance, repair and installation of dryers. Parts and accessories sales",
+            },
+          ],
+        },
+        refrigeration: {
+          title: "Domestic Refrigeration",
+          description: "Maintenance, repair and installation of refrigerators and freezers. Accessories and parts sales",
+          items: [
+            {
+              name: "Refrigerators",
+              description: "Maintenance, repair and installation of refrigerators. Accessories and parts sales",
+            },
+            {
+              name: "Freezers",
+              description: "Maintenance, repair and installation of freezers. Accessories and parts sales",
+            },
+          ],
+        },
       },
       industrial: {
         title: "Industrial Line",
         description: "Industrial equipment",
-        items: ["Industrial Refrigeration", "Cold Rooms", "Commercial Equipment"],
+        laundry: {
+          title: "Industrial Laundry",
+          description: "Maintenance and repair of industrial laundry equipment: washers and dryers",
+          items: [
+            {
+              name: "Industrial Washers",
+              description: "Maintenance and repair of industrial washers",
+            },
+            {
+              name: "Industrial Dryers",
+              description: "Maintenance and repair of industrial dryers",
+            },
+          ],
+        },
+        refrigeration: {
+          title: "Industrial Refrigeration",
+          description: "Maintenance and repair of industrial refrigeration equipment: cold rooms, wine cellars, freezing tunnels, industrial display cases, freezers, chillers and ice machines",
+          items: [
+            {
+              name: "Cold Rooms",
+              description: "Maintenance and repair of cold rooms",
+            },
+            {
+              name: "Wine Cellars",
+              description: "Maintenance and repair of wine cellars",
+            },
+            {
+              name: "Freezing Tunnels",
+              description: "Maintenance and repair of freezing tunnels",
+            },
+            {
+              name: "Industrial Display Cases",
+              description: "Maintenance and repair of industrial display cases",
+            },
+            {
+              name: "Industrial Freezers",
+              description: "Maintenance and repair of industrial freezers",
+            },
+            {
+              name: "Chillers",
+              description: "Maintenance and repair of chillers",
+            },
+            {
+              name: "Ice Machines",
+              description: "Maintenance and repair of ice machines",
+            },
+          ],
+        },
       },
       preventive: {
         title: "Preventive Maintenance",
-        description: "Maintenance plans",
-        items: ["General Maintenance", "Repairs", "Emergency Service"],
+        description: "Maintenance plans to keep your equipment in optimal condition",
+        items: [
+          {
+            name: "General Inspection",
+            description: "Complete review of your equipment to detect problems early",
+          },
+          {
+            name: "System Cleaning",
+            description: "Deep cleaning of refrigeration and ventilation systems",
+          },
+          {
+            name: "Component Review",
+            description: "Detailed inspection of critical components",
+          },
+          {
+            name: "Calibration",
+            description: "Adjustment and calibration of equipment for maximum performance",
+          },
+        ],
       },
     },
     why: {

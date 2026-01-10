@@ -32,14 +32,38 @@ export function Navbar({ t, lang, onLanguageToggle }: NavbarProps) {
     const element = document.getElementById(targetId)
 
     if (element) {
-      const navbarHeight = 64
+      const navbarHeight = 80 // Altura del navbar más padding
       const elementPosition = element.getBoundingClientRect().top
       const offsetPosition = elementPosition + window.pageYOffset - navbarHeight
+      const startPosition = window.pageYOffset
+      const distance = offsetPosition - startPosition
+      const duration = 800 // Duración en milisegundos para un scroll más visible y fluido
+      let start: number | null = null
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      })
+      // Función de easing para un movimiento más natural (ease-in-out)
+      const easeInOutCubic = (t: number): number => {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+      }
+
+      const animateScroll = (currentTime: number) => {
+        if (start === null) start = currentTime
+        const timeElapsed = currentTime - start
+        const progress = Math.min(timeElapsed / duration, 1)
+        
+        // Aplicar función de easing
+        const ease = easeInOutCubic(progress)
+        
+        window.scrollTo(0, startPosition + distance * ease)
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animateScroll)
+        } else {
+          // Asegurar que llegamos exactamente al destino
+          window.scrollTo(0, offsetPosition)
+        }
+      }
+
+      requestAnimationFrame(animateScroll)
     }
 
     setIsMobileMenuOpen(false)

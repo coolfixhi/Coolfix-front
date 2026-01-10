@@ -128,6 +128,12 @@
   /* Añadido scroll suave para toda la página */
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Altura del navbar para mejor alineación */
+  }
+  
+  /* Mejorar el rendimiento del scroll */
+  * {
+    scroll-margin-top: 80px; /* Espacio adicional para elementos con scroll */
   }
 }
 
