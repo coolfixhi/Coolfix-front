@@ -83,24 +83,24 @@ export function Navbar({ t, lang, onLanguageToggle }: NavbarProps) {
         isScrolled ? "bg-white shadow-md" : "bg-white/95 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex h-14 sm:h-16 items-center justify-between gap-2 sm:gap-4">
+          <Link href="/" className="flex items-center gap-1.5 sm:gap-2 shrink-0 min-w-0">
             <img 
               src="/img/LogoCoolfix.svg" 
               alt="COOLFIX" 
-              className="h-10 w-auto"
+              className="h-7 sm:h-8 md:h-10 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center gap-4 lg:gap-8 md:flex">
+          <div className="hidden items-center gap-3 md:gap-4 lg:gap-8 md:flex">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleSmoothScroll(e, item.href)}
-                className="text-sm font-medium text-foreground transition-colors hover:text-primary whitespace-nowrap"
+                className="text-xs md:text-sm font-medium text-foreground transition-colors hover:text-primary whitespace-nowrap"
               >
                 {item.label}
               </Link>
@@ -111,27 +111,27 @@ export function Navbar({ t, lang, onLanguageToggle }: NavbarProps) {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden shrink-0"
+            className="md:hidden shrink-0 p-1"
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMobileMenuOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="border-t py-4 md:hidden">
+          <div className="border-t py-3 md:hidden">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="block py-3 text-sm font-medium text-foreground transition-colors hover:text-primary"
+                className="block py-2.5 px-1 text-sm font-medium text-foreground transition-colors hover:text-primary"
                 onClick={(e) => handleSmoothScroll(e, item.href)}
               >
                 {item.label}
               </Link>
             ))}
-            <div className="mt-4 pt-4 border-t">
+            <div className="mt-3 pt-3 border-t px-1">
               <LanguageToggle currentLang={lang} onToggle={onLanguageToggle} />
             </div>
           </div>

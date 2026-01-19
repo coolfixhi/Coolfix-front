@@ -128,12 +128,61 @@
   /* Añadido scroll suave para toda la página */
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Altura del navbar para mejor alineación */
+    scroll-padding-top: 60px; /* Altura del navbar para mejor alineación en móviles */
+    overflow-x: hidden; /* Prevenir scroll horizontal no deseado */
+  }
+  
+  body {
+    overflow-x: hidden; /* Prevenir scroll horizontal no deseado */
+    max-width: 100vw; /* Limitar ancho máximo */
   }
   
   /* Mejorar el rendimiento del scroll */
   * {
-    scroll-margin-top: 80px; /* Espacio adicional para elementos con scroll */
+    scroll-margin-top: 60px; /* Espacio adicional para elementos con scroll en móviles */
+  }
+  
+  /* Ajustar scroll padding para pantallas más grandes */
+  @media (min-width: 640px) {
+    html {
+      scroll-padding-top: 70px;
+    }
+    * {
+      scroll-margin-top: 70px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    html {
+      scroll-padding-top: 80px;
+    }
+    * {
+      scroll-margin-top: 80px;
+    }
+  }
+  
+  /* Mejorar scroll horizontal en contenedores */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+    scrollbar-width: thin; /* Scrollbar más delgada */
+  }
+  
+  /* Ocultar scrollbar pero mantener funcionalidad */
+  .overflow-x-auto::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
   }
 }
 

@@ -26,9 +26,35 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Aquí iría la lógica para enviar el formulario
-    console.log("Form submitted:", formData)
+    
+    // Preparar el contenido del email
+    const subject = encodeURIComponent(`Nueva Solicitud de Servicio - ${formData.serviceType || "Sin especificar"}`)
+    const body = encodeURIComponent(
+      `Nueva solicitud de servicio recibida:\n\n` +
+      `Nombre: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Teléfono: ${formData.phone}\n` +
+      `Tipo de Servicio: ${formData.serviceType || "No especificado"}\n\n` +
+      `Descripción del Problema:\n${formData.description}`
+    )
+    
+    // Crear el enlace mailto
+    const mailtoLink = `mailto:Coolfixh.i@gmail.com?subject=${subject}&body=${body}`
+    
+    // Abrir el cliente de email
+    window.location.href = mailtoLink
+    
+    // Mostrar mensaje de éxito
     alert(t.contactForm.success)
+    
+    // Limpiar el formulario
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      serviceType: "",
+      description: "",
+    })
   }
 
   const services = [
@@ -41,22 +67,22 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
   ]
 
   return (
-    <section id="contacto" className="bg-gradient-to-b from-gray-50 to-white py-16 sm:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 sm:mb-12 text-center">
-          <h2 className="mb-4 text-balance text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
+    <section id="contacto" className="bg-gradient-to-b from-gray-50 to-white py-12 sm:py-16 md:py-20">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="mb-8 sm:mb-10 md:mb-12 text-center">
+          <h2 className="mb-3 sm:mb-4 text-balance text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
             {t.contactForm.title}
           </h2>
-          <p className="text-pretty text-base sm:text-lg text-muted-foreground">{t.contactForm.subtitle}</p>
+          <p className="text-pretty text-sm sm:text-base md:text-lg text-muted-foreground px-2">{t.contactForm.subtitle}</p>
         </div>
 
         <div className="mx-auto max-w-3xl">
-          <Card className="border-2 border-border/50 bg-white/80 backdrop-blur-sm p-6 sm:p-8 md:p-10 shadow-xl">
-            <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
-              <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
+          <Card className="border-2 border-border/50 bg-white/80 backdrop-blur-sm p-4 sm:p-6 md:p-8 lg:p-10 shadow-xl">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 md:space-y-8">
+              <div className="grid gap-4 sm:gap-6 md:gap-8 md:grid-cols-2">
                 <div className="group space-y-2">
-                  <label className="flex items-center gap-2 text-sm font-semibold text-foreground transition-colors group-focus-within:text-primary">
-                    <User className="h-4 w-4" />
+                  <label className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-foreground transition-colors group-focus-within:text-primary">
+                    <User className="h-3 w-3 sm:h-4 sm:w-4" />
                     {t.contactForm.name}
                   </label>
                   <Input
@@ -64,13 +90,13 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="h-12 transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="h-10 sm:h-12 text-sm sm:text-base transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
                     placeholder="Ingresa tu nombre completo"
                   />
                 </div>
                 <div className="group space-y-2">
-                  <label className="flex items-center gap-2 text-sm font-semibold text-foreground transition-colors group-focus-within:text-primary">
-                    <Mail className="h-4 w-4" />
+                  <label className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-foreground transition-colors group-focus-within:text-primary">
+                    <Mail className="h-3 w-3 sm:h-4 sm:w-4" />
                     {t.contactForm.email}
                   </label>
                   <Input
@@ -78,16 +104,16 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="h-12 transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="h-10 sm:h-12 text-sm sm:text-base transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
                     placeholder="correo@ejemplo.com"
                   />
                 </div>
               </div>
 
-              <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
+              <div className="grid gap-4 sm:gap-6 md:gap-8 md:grid-cols-2">
                 <div className="group space-y-2">
-                  <label className="flex items-center gap-2 text-sm font-semibold text-foreground transition-colors group-focus-within:text-primary">
-                    <Phone className="h-4 w-4" />
+                  <label className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-foreground transition-colors group-focus-within:text-primary">
+                    <Phone className="h-3 w-3 sm:h-4 sm:w-4" />
                     {t.contactForm.phone}
                   </label>
                   <Input
@@ -95,20 +121,20 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="h-12 transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    className="h-10 sm:h-12 text-sm sm:text-base transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
                     placeholder="+1234567890"
                   />
                 </div>
                 <div className="group space-y-2">
-                  <label className="flex items-center gap-2 text-sm font-semibold text-foreground transition-colors group-focus-within:text-primary">
-                    <Wrench className="h-4 w-4" />
+                  <label className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-foreground transition-colors group-focus-within:text-primary">
+                    <Wrench className="h-3 w-3 sm:h-4 sm:w-4" />
                     {t.contactForm.serviceType}
                   </label>
                   <Select
                     value={formData.serviceType}
                     onValueChange={(value) => setFormData({ ...formData, serviceType: value })}
                   >
-                    <SelectTrigger className="h-12 transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20">
+                    <SelectTrigger className="h-10 sm:h-12 text-sm sm:text-base transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20">
                       <SelectValue placeholder={t.contactForm.selectService} />
                     </SelectTrigger>
                     <SelectContent>
@@ -123,8 +149,8 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
               </div>
 
               <div className="group space-y-2">
-                <label className="flex items-center gap-2 text-sm font-semibold text-foreground transition-colors group-focus-within:text-primary">
-                  <MessageSquare className="h-4 w-4" />
+                <label className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-foreground transition-colors group-focus-within:text-primary">
+                  <MessageSquare className="h-3 w-3 sm:h-4 sm:w-4" />
                   {t.contactForm.description}
                 </label>
                 <Textarea
@@ -132,7 +158,7 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
                   rows={5}
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  className="min-h-[120px] resize-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  className="min-h-[100px] sm:min-h-[120px] resize-none text-sm sm:text-base transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20"
                   placeholder="Describe tu problema o necesidad..."
                 />
               </div>
@@ -140,7 +166,7 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
               <Button
                 type="submit"
                 size="lg"
-                className="group relative w-full gap-2 overflow-hidden py-6 text-base font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
+                className="group relative w-full gap-2 overflow-hidden py-4 sm:py-5 md:py-6 text-sm sm:text-base font-semibold transition-all duration-300 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   {t.contactForm.submit}

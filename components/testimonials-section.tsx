@@ -10,18 +10,18 @@ interface TestimonialsSectionProps {
 
 export function TestimonialsSection({ t }: TestimonialsSectionProps) {
   return (
-    <section id="testimonios" className="bg-white py-20">
-      <div className="container mx-auto px-4">
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 text-balance text-3xl font-bold text-foreground md:text-4xl">{t.testimonials.title}</h2>
-          <p className="text-pretty text-lg text-muted-foreground">{t.testimonials.subtitle}</p>
+    <section id="testimonios" className="bg-white py-12 sm:py-16 md:py-20">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6">
+        <div className="mb-8 sm:mb-10 md:mb-12 text-center">
+          <h2 className="mb-3 sm:mb-4 text-balance text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">{t.testimonials.title}</h2>
+          <p className="text-pretty text-sm sm:text-base md:text-lg text-muted-foreground px-2">{t.testimonials.subtitle}</p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {t.testimonials.items.map((testimonial, index) => (
             <Card
               key={index}
-              className="animate-fade-in-up p-8 transition-all duration-300 hover:shadow-xl"
+              className="animate-fade-in-up p-4 sm:p-6 md:p-8 transition-all duration-300 hover:shadow-xl"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-4 flex gap-1">

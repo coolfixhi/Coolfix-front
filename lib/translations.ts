@@ -203,16 +203,12 @@ export const translations = {
             description: "Revisión completa de sus equipos para detectar problemas a tiempo",
           },
           {
-            name: "Limpieza de Sistemas",
+            name: "Limpieza de Equipos",
             description: "Limpieza profunda de sistemas de refrigeración y ventilación",
           },
           {
             name: "Revisión de Componentes",
             description: "Inspección detallada de componentes críticos",
-          },
-          {
-            name: "Calibración",
-            description: "Ajuste y calibración de equipos para máximo rendimiento",
           },
         ],
       },
@@ -495,16 +491,12 @@ export const translations = {
             description: "Complete review of your equipment to detect problems early",
           },
           {
-            name: "System Cleaning",
+            name: "Equipment Cleaning",
             description: "Deep cleaning of refrigeration and ventilation systems",
           },
           {
             name: "Component Review",
             description: "Detailed inspection of critical components",
-          },
-          {
-            name: "Calibration",
-            description: "Adjustment and calibration of equipment for maximum performance",
           },
         ],
       },

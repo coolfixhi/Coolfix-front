@@ -22,6 +22,11 @@ export const metadata: Metadata = {
     "Técnicos certificados",
     "Precios justos",
   ],
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
   icons: {
     icon: [
       {
