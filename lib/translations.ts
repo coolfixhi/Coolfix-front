@@ -280,6 +280,8 @@ export const translations = {
       description: "Descripción del Problema",
       submit: "Enviar Solicitud",
       success: "¡Solicitud enviada con éxito!",
+      error: "Error al enviar la solicitud. Por favor, intenta nuevamente.",
+      sending: "Enviando...",
     },
     footer: {
       description:
@@ -568,6 +570,8 @@ export const translations = {
       description: "Problem Description",
       submit: "Submit Request",
       success: "Request sent successfully!",
+      error: "Error sending request. Please try again.",
+      sending: "Sending...",
     },
     footer: {
       description: "Professional repair of industrial and domestic equipment. Reliable service for over 10 years.",
