@@ -29,7 +29,7 @@ export const translations = {
         ],
       },
       commercial: {
-        title: "Línea Comercial",
+        title: "Comercial",
         description: "Equipos comerciales de refrigeración",
         refrigeration: {
           title: "Refrigeración Comercial",
@@ -59,7 +59,7 @@ export const translations = {
         },
       },
       domestic: {
-        title: "Línea Doméstica",
+        title: "Doméstica",
         description: "Electrodomésticos del hogar",
         kitchen: {
           title: "Cocina",
@@ -143,7 +143,7 @@ export const translations = {
         },
       },
       industrial: {
-        title: "Línea Industrial",
+        title: "Industrial",
         description: "Equipos industriales",
         laundry: {
           title: "Lavandería Industrial",

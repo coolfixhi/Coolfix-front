@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Coolfix",
   description:
     "Servicio profesional de reparación de refrigeradores, lavadoras, secadoras y equipos industriales. Atención 24/7 para emergencias. Técnicos certificados y precios justos.",
-  generator: "Sebinhas & Miguel",
+  generator: "Coolfix",
   keywords: [
     "Coolfix",
     "Reparación de refrigeradores",
@@ -30,19 +30,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
+        url: "/img/IconCoolfix.svg",
         type: "image/svg+xml",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/img/IconCoolfix.svg",
   },
 }
 
