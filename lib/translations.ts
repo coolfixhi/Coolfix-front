@@ -29,7 +29,7 @@ export const translations = {
         ],
       },
       commercial: {
-        title: "Línea Comercial",
+        title: "Comercial",
         description: "Equipos comerciales de refrigeración",
         refrigeration: {
           title: "Refrigeración Comercial",
@@ -59,7 +59,7 @@ export const translations = {
         },
       },
       domestic: {
-        title: "Línea Doméstica",
+        title: "Doméstica",
         description: "Electrodomésticos del hogar",
         kitchen: {
           title: "Cocina",
@@ -143,7 +143,7 @@ export const translations = {
         },
       },
       industrial: {
-        title: "Línea Industrial",
+        title: "Industrial",
         description: "Equipos industriales",
         laundry: {
           title: "Lavandería Industrial",
@@ -280,6 +280,8 @@ export const translations = {
       description: "Descripción del Problema",
       submit: "Enviar Solicitud",
       success: "¡Solicitud enviada con éxito!",
+      error: "Error al enviar la solicitud. Por favor, intenta nuevamente.",
+      sending: "Enviando...",
     },
     footer: {
       description:
@@ -568,6 +570,8 @@ export const translations = {
       description: "Problem Description",
       submit: "Submit Request",
       success: "Request sent successfully!",
+      error: "Error sending request. Please try again.",
+      sending: "Sending...",
     },
     footer: {
       description: "Professional repair of industrial and domestic equipment. Reliable service for over 10 years.",
