@@ -85,8 +85,8 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
     "Refrigeradores",
     "Lavadoras",
     "Secadoras",
-    "Refrigeración Industrial",
-    "Mantenimiento Preventivo",
+    "Refrigeración industrial",
+    "Mantenimiento preventivo",
     "Emergencia",
   ]
 

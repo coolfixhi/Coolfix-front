@@ -8,22 +8,22 @@ export const translations = {
       contact: "Contacto",
     },
     hero: {
-      badge: "Servicio de Emergencia 24/7",
-      title: "Reparación Profesional de",
-      titleHighlight: "Equipos Industriales y Domésticos",
+      badge: "Servicio de emergencia 24/7",
+      title: "Reparación profesional de",
+      titleHighlight: "equipos industriales y domésticos",
       subtitle: "Expertos en refrigeración, lavado y secado. Servicio rápido, confiable y garantizado.",
-      ctaPrimary: "Solicitar Servicio",
-      ctaSecondary: "Ver Servicios",
+      ctaPrimary: "Solicitar servicio",
+      ctaSecondary: "Ver servicios",
     },
     services: {
-      title: "Nuestros Servicios",
+      title: "Nuestros servicios",
       subtitle: "Soluciones completas para todos sus equipos.",
       airConditioning: {
-        title: "Aire Acondicionado",
+        title: "Aire acondicionado",
         description: "Mantenimiento, reparación e instalación de aires acondicionados.",
         items: [
           {
-            name: "Aire Acondicionado",
+            name: "Aire acondicionado",
             description: "Mantenimiento, reparación e instalación de aires acondicionados.",
           },
         ],
@@ -209,19 +209,19 @@ export const translations = {
         },
       },
       preventive: {
-        title: "Mantenimiento Preventivo",
+        title: "Mantenimiento preventivo",
         description: "Planes de mantenimiento para mantener sus equipos en óptimas condiciones.",
         items: [
           {
-            name: "Inspección General",
+            name: "Inspección general",
             description: "Revisión completa de sus equipos para detectar problemas a tiempo.",
           },
           {
-            name: "Limpieza de Equipos",
+            name: "Limpieza de equipos",
             description: "Limpieza profunda de sistemas de refrigeración y ventilación.",
           },
           {
-            name: "Revisión de Componentes",
+            name: "Revisión de componentes",
             description: "Inspección detallada de componentes críticos.",
           },
         ],
@@ -231,23 +231,23 @@ export const translations = {
       title: "¿Por qué elegir COOLFIX?",
       subtitle: "La mejor opción para el cuidado de sus equipos.",
       certified: {
-        title: "Técnicos Certificados",
+        title: "Técnicos certificados",
         description: "Personal altamente capacitado y certificado.",
       },
       fast: {
-        title: "Respuesta Rápida",
+        title: "Respuesta rápida",
         description: "Atendemos su llamada en menos de 30 minutos.",
       },
       guarantee: {
-        title: "Garantía Total",
+        title: "Garantía total",
         description: "Todos nuestros servicios incluyen garantía.",
       },
       price: {
-        title: "Precios Justos",
+        title: "Precios justos",
         description: "Cotizaciones transparentes sin sorpresas.",
       },
       emergency: {
-        title: "Servicio de Emergencia",
+        title: "Servicio de emergencia",
         description: "Disponibles 24/7 para emergencias críticas.",
       },
     },
@@ -281,7 +281,7 @@ export const translations = {
       saturdayTime: "8:00 AM - 2:00 PM",
       sunday: "Domingo",
       sundayTime: "Solo Emergencias",
-      emergency: "Servicio de Emergencia 24/7 Disponible",
+      emergency: "Servicio de emergencia 24/7 disponible",
     },
     contactForm: {
       title: "Solicitar servicio",
@@ -312,79 +312,79 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-      badge: "24/7 Emergency Service",
-      title: "Professional Repair of",
-      titleHighlight: "Industrial and Domestic Equipment",
+      badge: "24/7 emergency service",
+      title: "Professional repair of",
+      titleHighlight: "industrial and domestic equipment",
       subtitle: "Experts in refrigeration, washing and drying. Fast, reliable and guaranteed service.",
-      ctaPrimary: "Request Service",
-      ctaSecondary: "View Services",
+      ctaPrimary: "Request service",
+      ctaSecondary: "View services",
     },
     services: {
-      title: "Our Services",
+      title: "Our services",
       subtitle: "Complete solutions for all your equipment.",
       airConditioning: {
-        title: "Air Conditioning",
+        title: "Air conditioning",
         description: "Maintenance, repair and installation of air conditioners.",
         items: [
           {
-            name: "Air Conditioning",
+            name: "Air conditioning",
             description: "Maintenance, repair and installation of air conditioners.",
           },
         ],
       },
       commercial: {
-        title: "Commercial Line",
+        title: "Commercial line",
         description: "Commercial refrigeration equipment.",
         display: {
           neveras: {
-            title: "Commercial Display Refrigerators",
+            title: "Commercial display refrigerators",
             description: "Maintenance of Display Refrigerators and Commercial Refrigeration. Focused on refrigerated display cases, vertical refrigerators and preservation equipment for retail points.",
           },
           dispensadores: {
-            title: "Water Dispensers",
+            title: "Water dispensers",
             description: "Water Dispenser Maintenance and Repair. Focused on internal cleaning, cooling system review, pumps, valves, sensors and electrical system.",
           },
           bebidas: {
-            title: "Specialized Cold Beverage Equipment",
+            title: "Specialized cold beverage equipment",
             description: "Technical Service for Slush Machines, Ice Cream Machines and Gelato Machines. Groups cold beverage and dessert equipment, ideal for businesses like cafes, ice cream shops and restaurants.",
           },
         },
         refrigeration: {
-          title: "Commercial Refrigeration",
+          title: "Commercial refrigeration",
           description: "Maintenance and repair of water dispensers, slush machines, freezers, gelato machines, display coolers.",
           items: [
             {
-              name: "Water Dispensers",
+              name: "Water dispensers",
               description: "Maintenance and repair of water dispensers.",
             },
             {
-              name: "Slush Machines",
+              name: "Slush machines",
               description: "Maintenance and repair of slush machines",
             },
             {
-              name: "Commercial Freezers",
+              name: "Commercial freezers",
               description: "Maintenance and repair of commercial freezers",
             },
             {
-              name: "Gelato Machines",
+              name: "Gelato machines",
               description: "Maintenance and repair of gelato machines",
             },
             {
-              name: "Display Coolers",
+              name: "Display coolers",
               description: "Maintenance and repair of display coolers",
             },
           ],
         },
       },
       domestic: {
-        title: "Domestic Line",
+        title: "Domestic line",
         description: "Home appliances.",
         kitchen: {
-          title: "Kitchen",
+          title: "Kitchen appliances",
           description: "Maintenance, repair and installation of range hoods, stoves, ovens, microwave ovens, dishwashers, garbage disposals.",
           items: [
             {
-              name: "Range Hoods",
+              name: "Range hoods",
               description: "Maintenance, repair and installation of range hoods.",
             },
             {
@@ -396,7 +396,7 @@ export const translations = {
               description: "Maintenance, repair and installation of ovens",
             },
             {
-              name: "Microwave Ovens",
+              name: "Microwave ovens",
               description: "Maintenance, repair and installation of microwave ovens",
             },
             {
@@ -404,29 +404,29 @@ export const translations = {
               description: "Maintenance, repair and installation of dishwashers",
             },
             {
-              name: "Garbage Disposals",
+              name: "Garbage disposals",
               description: "Maintenance, repair and installation of garbage disposals",
             },
           ],
         },
         gas: {
-          title: "Gas Appliances",
+          title: "Gas appliances",
           description: "Maintenance, repair and installation of water heaters: tankless, electric, gas and storage.",
           items: [
             {
-              name: "Tankless Water Heaters",
+              name: "Tankless water heaters",
               description: "Maintenance, repair and installation of tankless water heaters.",
             },
             {
-              name: "Electric Water Heaters",
+              name: "Electric water heaters",
               description: "Maintenance, repair and installation of electric water heaters",
             },
             {
-              name: "Gas Water Heaters",
+              name: "Gas water heaters",
               description: "Maintenance, repair and installation of gas water heaters",
             },
             {
-              name: "Storage Water Heaters",
+              name: "Storage water heaters",
               description: "Maintenance, repair and installation of storage water heaters",
             },
           ],
@@ -446,7 +446,7 @@ export const translations = {
           ],
         },
         refrigeration: {
-          title: "Domestic Refrigeration",
+          title: "Domestic refrigeration",
           description: "Maintenance, repair and installation of refrigerators and freezers. Accessories and parts sales.",
           items: [
             {
@@ -461,44 +461,44 @@ export const translations = {
         },
       },
       industrial: {
-        title: "Industrial Line",
+        title: "Industrial line",
         description: "Industrial equipment.",
         laundry: {
-          title: "Industrial Laundry",
+          title: "Industrial laundry",
           description: "Maintenance and repair of industrial laundry equipment: washers and dryers.",
           items: [
             {
-              name: "Industrial Washers",
+              name: "Industrial washers",
               description: "Maintenance and repair of industrial washers.",
             },
             {
-              name: "Industrial Dryers",
+              name: "Industrial dryers",
               description: "Maintenance and repair of industrial dryers",
             },
           ],
         },
         refrigeration: {
-          title: "Industrial Refrigeration",
+          title: "Industrial refrigeration",
           description: "Maintenance and repair of industrial refrigeration equipment: cold rooms, wine cellars, freezing tunnels, industrial display cases, freezers, chillers and ice machines.",
           items: [
             {
-              name: "Cold Rooms",
+              name: "Cold rooms",
               description: "Maintenance and repair of cold rooms.",
             },
             {
-              name: "Wine Cellars",
+              name: "Wine cellars",
               description: "Maintenance and repair of wine cellars",
             },
             {
-              name: "Freezing Tunnels",
+              name: "Freezing tunnels",
               description: "Maintenance and repair of freezing tunnels",
             },
             {
-              name: "Industrial Display Cases",
+              name: "Industrial display cases",
               description: "Maintenance and repair of industrial display cases",
             },
             {
-              name: "Industrial Freezers",
+              name: "Industrial freezers",
               description: "Maintenance and repair of industrial freezers",
             },
             {
@@ -506,26 +506,26 @@ export const translations = {
               description: "Maintenance and repair of chillers",
             },
             {
-              name: "Ice Machines",
+              name: "Ice machines",
               description: "Maintenance and repair of ice machines",
             },
           ],
         },
       },
       preventive: {
-        title: "Preventive Maintenance",
+        title: "Preventive maintenance",
         description: "Maintenance plans to keep your equipment in optimal condition.",
         items: [
           {
-            name: "General Inspection",
+            name: "General inspection",
             description: "Complete review of your equipment to detect problems early.",
           },
           {
-            name: "Equipment Cleaning",
+            name: "Equipment cleaning",
             description: "Deep cleaning of refrigeration and ventilation systems.",
           },
           {
-            name: "Component Review",
+            name: "Component review",
             description: "Detailed inspection of critical components.",
           },
         ],
@@ -535,23 +535,23 @@ export const translations = {
       title: "Why choose COOLFIX?",
       subtitle: "The best option for your equipment care.",
       certified: {
-        title: "Certified Technicians",
+        title: "Certified technicians",
         description: "Highly trained and certified personnel.",
       },
       fast: {
-        title: "Fast Response",
+        title: "Fast response",
         description: "We answer your call in less than 30 minutes.",
       },
       guarantee: {
-        title: "Total Guarantee",
+        title: "Total guarantee",
         description: "All our services include warranty.",
       },
       price: {
-        title: "Fair Prices",
+        title: "Fair prices",
         description: "Transparent quotes without surprises.",
       },
       emergency: {
-        title: "Emergency Service",
+        title: "Emergency service",
         description: "Available 24/7 for critical emergencies.",
       },
     },
@@ -585,7 +585,7 @@ export const translations = {
       saturdayTime: "8:00 AM - 2:00 PM",
       sunday: "Sunday",
       sundayTime: "Emergencies Only",
-      emergency: "24/7 Emergency Service Available",
+      emergency: "24/7 emergency service available",
     },
     contactForm: {
       title: "Request service",

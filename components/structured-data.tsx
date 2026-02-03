@@ -68,7 +68,7 @@ export function StructuredData() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Refrigeración Industrial",
+            name: "Refrigeración industrial",
             description: "Mantenimiento y reparación de equipos de refrigeración industrial: cuartos fríos, cavas, túneles de congelación, chillers.",
           },
         },
@@ -76,7 +76,7 @@ export function StructuredData() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Mantenimiento Preventivo",
+            name: "Mantenimiento preventivo",
             description: "Planes de mantenimiento para mantener sus equipos en óptimas condiciones.",
           },
         },
@@ -84,7 +84,7 @@ export function StructuredData() {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Servicio de Emergencia 24/7",
+            name: "Servicio de emergencia 24/7",
             description: "Atención de emergencias las 24 horas del día, los 7 días de la semana.",
           },
         },

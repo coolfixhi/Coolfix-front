@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Coolfix - Reparación Profesional de Equipos Industriales y Domésticos",
+    default: "Coolfix - Reparación profesional de equipos industriales y domésticos",
     template: "%s | Coolfix",
   },
   description:
