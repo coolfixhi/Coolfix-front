@@ -63,20 +63,34 @@ export function ServicesSection({ t }: ServicesSectionProps) {
         id: `preventive-${index}`,
         title: item.name,
         description: item.description,
-        image: index === 0 ? "/equipment-inspection.jpg" : 
-               index === 1 ? "/system-cleaning.jpg" : 
-               "/component-check.jpg"
+        image: index === 0 ? "/img/MT1.jpeg" : 
+               index === 1 ? "/img/MT3.jpeg" : 
+               "/img/MT2.jpeg"
       }))
     }
 
     // Para Línea Comercial, mostrar todas las subcategorías
     if (selectedCategory === "commercial") {
-      return [{
-        id: "commercial-refrigeration",
-        title: t.services.commercial.refrigeration.title,
-        description: t.services.commercial.refrigeration.description,
-        image: "/img/LC1.jpeg"
-      }]
+      return [
+        {
+          id: "commercial-neveras",
+          title: t.services.commercial.display.neveras.title,
+          description: t.services.commercial.display.neveras.description,
+          image: "/img/LC1.jpeg"
+        },
+        {
+          id: "commercial-dispensadores",
+          title: t.services.commercial.display.dispensadores.title,
+          description: t.services.commercial.display.dispensadores.description,
+          image: "/img/LC2.jpeg"
+        },
+        {
+          id: "commercial-bebidas",
+          title: t.services.commercial.display.bebidas.title,
+          description: t.services.commercial.display.bebidas.description,
+          image: "/img/LC3.jpeg"
+        }
+      ]
     }
 
     // Para Línea Doméstica, mostrar todas las subcategorías
@@ -143,7 +157,7 @@ export function ServicesSection({ t }: ServicesSectionProps) {
   const displayServices = getDisplayServices()
 
   return (
-    <section id="servicios" className="bg-gradient-to-b from-white to-gray-50 py-12 sm:py-16 md:py-20">
+    <section id="servicios" className="bg-linear-to-b from-white to-gray-50 py-12 sm:py-16 md:py-20">
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="mb-8 sm:mb-10 md:mb-12 text-center">
           <h2 className="mb-3 sm:mb-4 text-balance text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
@@ -168,7 +182,7 @@ export function ServicesSection({ t }: ServicesSectionProps) {
                         px-2 sm:px-3 py-1.5 sm:py-2
                         rounded-md font-medium text-[10px] sm:text-xs md:text-sm
                         transition-all duration-300 ease-out
-                        flex-shrink-0
+                        shrink-0
                         overflow-hidden cursor-pointer
                         whitespace-nowrap
                         ${
@@ -243,7 +257,7 @@ export function ServicesSection({ t }: ServicesSectionProps) {
                       alt={service.title}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   </div>
                   <div className="p-2 sm:p-3 md:p-4 text-center">
                     <h4 className="text-balance font-semibold text-xs sm:text-sm md:text-base text-foreground group-hover:text-primary transition-colors mb-1 sm:mb-2">

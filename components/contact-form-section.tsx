@@ -28,6 +28,17 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Validar teléfono: mínimo 10 dígitos
+    const phoneDigits = formData.phone.replace(/\D/g, '') // Remover todo excepto números
+    if (phoneDigits.length < 10) {
+      toast.error("Teléfono inválido", {
+        description: "El teléfono debe tener al menos 10 dígitos.",
+        duration: 5000,
+      })
+      return
+    }
+
     setIsSubmitting(true)
 
     try {
@@ -80,7 +91,7 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
   ]
 
   return (
-    <section id="contacto" className="bg-gradient-to-b from-gray-50 to-white py-12 sm:py-16 md:py-20">
+    <section id="contacto" className="bg-linear-to-b from-gray-50 to-white py-12 sm:py-16 md:py-20">
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="mb-8 sm:mb-10 md:mb-12 text-center">
           <h2 className="mb-3 sm:mb-4 text-balance text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
@@ -199,7 +210,7 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
                       </>
                     )}
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className="absolute inset-0 bg-linear-to-r from-primary via-primary/90 to-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </Button>
               </div>
             </form>

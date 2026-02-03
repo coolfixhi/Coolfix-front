@@ -17,27 +17,41 @@ export const translations = {
     },
     services: {
       title: "Nuestros Servicios",
-      subtitle: "Soluciones completas para todos sus equipos",
+      subtitle: "Soluciones completas para todos sus equipos.",
       airConditioning: {
         title: "Aire Acondicionado",
-        description: "Mantenimiento, reparación e instalación de aires acondicionados",
+        description: "Mantenimiento, reparación e instalación de aires acondicionados.",
         items: [
           {
             name: "Aire Acondicionado",
-            description: "Mantenimiento, reparación e instalación de aires acondicionados",
+            description: "Mantenimiento, reparación e instalación de aires acondicionados.",
           },
         ],
       },
       commercial: {
         title: "Comercial",
-        description: "Equipos comerciales de refrigeración",
+        description: "Equipos comerciales de refrigeración.",
+        display: {
+          neveras: {
+            title: "Neveras Comerciales de Exhibición",
+            description: "Mantenimiento de Neveras de Exhibición y Refrigeración Comercial. Orientado a vitrinas refrigeradas, neveras verticales y equipos de conservación para puntos de venta.",
+          },
+          dispensadores: {
+            title: "Dispensadores de Agua",
+            description: "Mantenimiento y Reparación de Dispensadores de Agua. Enfocado en limpieza interna, revisión de enfriamiento, bombas, válvulas, sensores y sistema eléctrico.",
+          },
+          bebidas: {
+            title: "Equipos de Frío y Bebidas Especializadas",
+            description: "Servicio Técnico para Granizadoras, Heladeras y Máquinas de Gelato. Agrupa los equipos de bebidas y postres fríos, ideal para negocios como cafeterías, heladerías y restaurantes.",
+          },
+        },
         refrigeration: {
           title: "Refrigeración Comercial",
-          description: "Mantenimiento y reparación de dispensadores de agua, granizadoras, heladeras, máquinas de gelato, neveras de exhibición",
+          description: "Mantenimiento y reparación de dispensadores de agua, granizadoras, heladeras, máquinas de gelato, neveras de exhibición.",
           items: [
             {
               name: "Dispensadores de Agua",
-              description: "Mantenimiento y reparación de dispensadores de agua",
+              description: "Mantenimiento y reparación de dispensadores de agua.",
             },
             {
               name: "Granizadoras",
@@ -60,14 +74,14 @@ export const translations = {
       },
       domestic: {
         title: "Doméstica",
-        description: "Electrodomésticos del hogar",
+        description: "Electrodomésticos del hogar.",
         kitchen: {
           title: "Cocina",
-          description: "Mantenimiento, reparación e instalación de campanas extractoras, estufas, hornos, hornos microondas, lavavajillas, trituradores",
+          description: "Mantenimiento, reparación e instalación de campanas extractoras, estufas, hornos, hornos microondas, lavavajillas, trituradores.",
           items: [
             {
               name: "Campanas Extractoras",
-              description: "Mantenimiento, reparación e instalación de campanas extractoras",
+              description: "Mantenimiento, reparación e instalación de campanas extractoras.",
             },
             {
               name: "Estufas",
@@ -93,11 +107,11 @@ export const translations = {
         },
         gas: {
           title: "Gasodomésticos",
-          description: "Mantenimiento, reparación e instalación de calentadores de agua: de paso, eléctricos, a gas y de acumulación",
+          description: "Mantenimiento, reparación e instalación de calentadores de agua: de paso, eléctricos, a gas y de acumulación.",
           items: [
             {
               name: "Calentadores de Paso",
-              description: "Mantenimiento, reparación e instalación de calentadores de agua de paso",
+              description: "Mantenimiento, reparación e instalación de calentadores de agua de paso.",
             },
             {
               name: "Calentadores Eléctricos",
@@ -115,11 +129,11 @@ export const translations = {
         },
         laundry: {
           title: "Lavandería",
-          description: "Mantenimiento, reparación e instalación de lavadoras y secadoras. Venta de repuestos y accesorios",
+          description: "Mantenimiento, reparación e instalación de lavadoras y secadoras. Venta de repuestos y accesorios.",
           items: [
             {
               name: "Lavadoras",
-              description: "Mantenimiento, reparación e instalación de lavadoras. Venta de repuestos y accesorios",
+              description: "Mantenimiento, reparación e instalación de lavadoras. Venta de repuestos y accesorios.",
             },
             {
               name: "Secadoras",
@@ -129,11 +143,11 @@ export const translations = {
         },
         refrigeration: {
           title: "Refrigeración Doméstica",
-          description: "Mantenimiento, reparación e instalación de neveras y nevecones. Venta de accesorios y repuestos",
+          description: "Mantenimiento, reparación e instalación de neveras y nevecones. Venta de accesorios y repuestos.",
           items: [
             {
               name: "Neveras",
-              description: "Mantenimiento, reparación e instalación de neveras. Venta de accesorios y repuestos",
+              description: "Mantenimiento, reparación e instalación de neveras. Venta de accesorios y repuestos.",
             },
             {
               name: "Nevecones",
@@ -144,14 +158,14 @@ export const translations = {
       },
       industrial: {
         title: "Industrial",
-        description: "Equipos industriales",
+        description: "Equipos industriales.",
         laundry: {
           title: "Lavandería Industrial",
-          description: "Mantenimiento y reparación de equipos de lavandería industrial: lavadoras y secadoras",
+          description: "Mantenimiento y reparación de equipos de lavandería industrial: lavadoras y secadoras.",
           items: [
             {
               name: "Lavadoras Industriales",
-              description: "Mantenimiento y reparación de lavadoras industriales",
+              description: "Mantenimiento y reparación de lavadoras industriales.",
             },
             {
               name: "Secadoras Industriales",
@@ -161,11 +175,11 @@ export const translations = {
         },
         refrigeration: {
           title: "Refrigeración Industrial",
-          description: "Mantenimiento y reparación de equipos de refrigeración industrial: cuartos fríos, cavas, túneles de congelación, vitrinas industriales, congeladores, chillers y máquinas de hielo",
+          description: "Mantenimiento y reparación de equipos de refrigeración industrial: cuartos fríos, cavas, túneles de congelación, vitrinas industriales, congeladores, chillers y máquinas de hielo.",
           items: [
             {
               name: "Cuartos Fríos",
-              description: "Mantenimiento y reparación de cuartos fríos",
+              description: "Mantenimiento y reparación de cuartos fríos.",
             },
             {
               name: "Cavas",
@@ -196,50 +210,50 @@ export const translations = {
       },
       preventive: {
         title: "Mantenimiento Preventivo",
-        description: "Planes de mantenimiento para mantener sus equipos en óptimas condiciones",
+        description: "Planes de mantenimiento para mantener sus equipos en óptimas condiciones.",
         items: [
           {
             name: "Inspección General",
-            description: "Revisión completa de sus equipos para detectar problemas a tiempo",
+            description: "Revisión completa de sus equipos para detectar problemas a tiempo.",
           },
           {
             name: "Limpieza de Equipos",
-            description: "Limpieza profunda de sistemas de refrigeración y ventilación",
+            description: "Limpieza profunda de sistemas de refrigeración y ventilación.",
           },
           {
             name: "Revisión de Componentes",
-            description: "Inspección detallada de componentes críticos",
+            description: "Inspección detallada de componentes críticos.",
           },
         ],
       },
     },
     why: {
-      title: "¿Por Qué Elegir COOLFIX?",
-      subtitle: "La mejor opción para el cuidado de sus equipos",
+      title: "¿Por qué elegir COOLFIX?",
+      subtitle: "La mejor opción para el cuidado de sus equipos.",
       certified: {
         title: "Técnicos Certificados",
-        description: "Personal altamente capacitado y certificado",
+        description: "Personal altamente capacitado y certificado.",
       },
       fast: {
         title: "Respuesta Rápida",
-        description: "Atendemos su llamada en menos de 2 horas",
+        description: "Atendemos su llamada en menos de 30 minutos.",
       },
       guarantee: {
         title: "Garantía Total",
-        description: "Todos nuestros servicios incluyen garantía",
+        description: "Todos nuestros servicios incluyen garantía.",
       },
       price: {
         title: "Precios Justos",
-        description: "Cotizaciones transparentes sin sorpresas",
+        description: "Cotizaciones transparentes sin sorpresas.",
       },
       emergency: {
         title: "Servicio de Emergencia",
-        description: "Disponibles 24/7 para emergencias críticas",
+        description: "Disponibles 24/7 para emergencias críticas.",
       },
     },
     testimonials: {
-      title: "Lo Que Dicen Nuestros Clientes",
-      subtitle: "Testimonios reales de clientes satisfechos",
+      title: "Lo que dicen nuestros clientes",
+      subtitle: "Testimonios reales de clientes satisfechos.",
       items: [
         {
           text: "Excelente servicio. Repararon nuestra cámara fría en tiempo récord. Muy profesionales y confiables.",
@@ -259,8 +273,8 @@ export const translations = {
       ],
     },
     hours: {
-      title: "Horario de Atención",
-      subtitle: "Estamos aquí cuando nos necesita",
+      title: "Horario de atención",
+      subtitle: "Estamos aquí cuando nos necesita.",
       weekdays: "Lunes - Viernes",
       weekdaysTime: "8:00 AM - 5:00 PM",
       saturday: "Sábado",
@@ -270,8 +284,8 @@ export const translations = {
       emergency: "Servicio de Emergencia 24/7 Disponible",
     },
     contactForm: {
-      title: "Solicitar Servicio",
-      subtitle: "Complete el formulario y nos pondremos en contacto",
+      title: "Solicitar servicio",
+      subtitle: "Complete el formulario y nos pondremos en contacto.",
       name: "Nombre Completo",
       email: "Correo Electrónico",
       phone: "Teléfono",
@@ -307,27 +321,41 @@ export const translations = {
     },
     services: {
       title: "Our Services",
-      subtitle: "Complete solutions for all your equipment",
+      subtitle: "Complete solutions for all your equipment.",
       airConditioning: {
         title: "Air Conditioning",
-        description: "Maintenance, repair and installation of air conditioners",
+        description: "Maintenance, repair and installation of air conditioners.",
         items: [
           {
             name: "Air Conditioning",
-            description: "Maintenance, repair and installation of air conditioners",
+            description: "Maintenance, repair and installation of air conditioners.",
           },
         ],
       },
       commercial: {
         title: "Commercial Line",
-        description: "Commercial refrigeration equipment",
+        description: "Commercial refrigeration equipment.",
+        display: {
+          neveras: {
+            title: "Commercial Display Refrigerators",
+            description: "Maintenance of Display Refrigerators and Commercial Refrigeration. Focused on refrigerated display cases, vertical refrigerators and preservation equipment for retail points.",
+          },
+          dispensadores: {
+            title: "Water Dispensers",
+            description: "Water Dispenser Maintenance and Repair. Focused on internal cleaning, cooling system review, pumps, valves, sensors and electrical system.",
+          },
+          bebidas: {
+            title: "Specialized Cold Beverage Equipment",
+            description: "Technical Service for Slush Machines, Ice Cream Machines and Gelato Machines. Groups cold beverage and dessert equipment, ideal for businesses like cafes, ice cream shops and restaurants.",
+          },
+        },
         refrigeration: {
           title: "Commercial Refrigeration",
-          description: "Maintenance and repair of water dispensers, slush machines, freezers, gelato machines, display coolers",
+          description: "Maintenance and repair of water dispensers, slush machines, freezers, gelato machines, display coolers.",
           items: [
             {
               name: "Water Dispensers",
-              description: "Maintenance and repair of water dispensers",
+              description: "Maintenance and repair of water dispensers.",
             },
             {
               name: "Slush Machines",
@@ -350,14 +378,14 @@ export const translations = {
       },
       domestic: {
         title: "Domestic Line",
-        description: "Home appliances",
+        description: "Home appliances.",
         kitchen: {
           title: "Kitchen",
-          description: "Maintenance, repair and installation of range hoods, stoves, ovens, microwave ovens, dishwashers, garbage disposals",
+          description: "Maintenance, repair and installation of range hoods, stoves, ovens, microwave ovens, dishwashers, garbage disposals.",
           items: [
             {
               name: "Range Hoods",
-              description: "Maintenance, repair and installation of range hoods",
+              description: "Maintenance, repair and installation of range hoods.",
             },
             {
               name: "Stoves",
@@ -383,11 +411,11 @@ export const translations = {
         },
         gas: {
           title: "Gas Appliances",
-          description: "Maintenance, repair and installation of water heaters: tankless, electric, gas and storage",
+          description: "Maintenance, repair and installation of water heaters: tankless, electric, gas and storage.",
           items: [
             {
               name: "Tankless Water Heaters",
-              description: "Maintenance, repair and installation of tankless water heaters",
+              description: "Maintenance, repair and installation of tankless water heaters.",
             },
             {
               name: "Electric Water Heaters",
@@ -405,11 +433,11 @@ export const translations = {
         },
         laundry: {
           title: "Laundry",
-          description: "Maintenance, repair and installation of washers and dryers. Parts and accessories sales",
+          description: "Maintenance, repair and installation of washers and dryers. Parts and accessories sales.",
           items: [
             {
               name: "Washers",
-              description: "Maintenance, repair and installation of washers. Parts and accessories sales",
+              description: "Maintenance, repair and installation of washers. Parts and accessories sales.",
             },
             {
               name: "Dryers",
@@ -419,11 +447,11 @@ export const translations = {
         },
         refrigeration: {
           title: "Domestic Refrigeration",
-          description: "Maintenance, repair and installation of refrigerators and freezers. Accessories and parts sales",
+          description: "Maintenance, repair and installation of refrigerators and freezers. Accessories and parts sales.",
           items: [
             {
               name: "Refrigerators",
-              description: "Maintenance, repair and installation of refrigerators. Accessories and parts sales",
+              description: "Maintenance, repair and installation of refrigerators. Accessories and parts sales.",
             },
             {
               name: "Freezers",
@@ -434,14 +462,14 @@ export const translations = {
       },
       industrial: {
         title: "Industrial Line",
-        description: "Industrial equipment",
+        description: "Industrial equipment.",
         laundry: {
           title: "Industrial Laundry",
-          description: "Maintenance and repair of industrial laundry equipment: washers and dryers",
+          description: "Maintenance and repair of industrial laundry equipment: washers and dryers.",
           items: [
             {
               name: "Industrial Washers",
-              description: "Maintenance and repair of industrial washers",
+              description: "Maintenance and repair of industrial washers.",
             },
             {
               name: "Industrial Dryers",
@@ -451,11 +479,11 @@ export const translations = {
         },
         refrigeration: {
           title: "Industrial Refrigeration",
-          description: "Maintenance and repair of industrial refrigeration equipment: cold rooms, wine cellars, freezing tunnels, industrial display cases, freezers, chillers and ice machines",
+          description: "Maintenance and repair of industrial refrigeration equipment: cold rooms, wine cellars, freezing tunnels, industrial display cases, freezers, chillers and ice machines.",
           items: [
             {
               name: "Cold Rooms",
-              description: "Maintenance and repair of cold rooms",
+              description: "Maintenance and repair of cold rooms.",
             },
             {
               name: "Wine Cellars",
@@ -486,50 +514,50 @@ export const translations = {
       },
       preventive: {
         title: "Preventive Maintenance",
-        description: "Maintenance plans to keep your equipment in optimal condition",
+        description: "Maintenance plans to keep your equipment in optimal condition.",
         items: [
           {
             name: "General Inspection",
-            description: "Complete review of your equipment to detect problems early",
+            description: "Complete review of your equipment to detect problems early.",
           },
           {
             name: "Equipment Cleaning",
-            description: "Deep cleaning of refrigeration and ventilation systems",
+            description: "Deep cleaning of refrigeration and ventilation systems.",
           },
           {
             name: "Component Review",
-            description: "Detailed inspection of critical components",
+            description: "Detailed inspection of critical components.",
           },
         ],
       },
     },
     why: {
-      title: "Why Choose COOLFIX?",
-      subtitle: "The best option for your equipment care",
+      title: "Why choose COOLFIX?",
+      subtitle: "The best option for your equipment care.",
       certified: {
         title: "Certified Technicians",
-        description: "Highly trained and certified personnel",
+        description: "Highly trained and certified personnel.",
       },
       fast: {
         title: "Fast Response",
-        description: "We answer your call in less than 2 hours",
+        description: "We answer your call in less than 30 minutes.",
       },
       guarantee: {
         title: "Total Guarantee",
-        description: "All our services include warranty",
+        description: "All our services include warranty.",
       },
       price: {
         title: "Fair Prices",
-        description: "Transparent quotes without surprises",
+        description: "Transparent quotes without surprises.",
       },
       emergency: {
         title: "Emergency Service",
-        description: "Available 24/7 for critical emergencies",
+        description: "Available 24/7 for critical emergencies.",
       },
     },
     testimonials: {
-      title: "What Our Clients Say",
-      subtitle: "Real testimonials from satisfied customers",
+      title: "What our clients say",
+      subtitle: "Real testimonials from satisfied customers.",
       items: [
         {
           text: "Excellent service. They repaired our cold room in record time. Very professional and reliable.",
@@ -549,8 +577,8 @@ export const translations = {
       ],
     },
     hours: {
-      title: "Business Hours",
-      subtitle: "We're here when you need us",
+      title: "Business hours",
+      subtitle: "We're here when you need us.",
       weekdays: "Monday - Friday",
       weekdaysTime: "8:00 AM - 5:00 PM",
       saturday: "Saturday",
@@ -560,8 +588,8 @@ export const translations = {
       emergency: "24/7 Emergency Service Available",
     },
     contactForm: {
-      title: "Request Service",
-      subtitle: "Fill out the form and we will contact you",
+      title: "Request service",
+      subtitle: "Fill out the form and we will contact you.",
       name: "Full Name",
       email: "Email",
       phone: "Phone",
