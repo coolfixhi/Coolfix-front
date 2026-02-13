@@ -218,7 +218,7 @@ export const translations = {
           },
           {
             name: "Limpieza de equipos",
-            description: "Limpieza profunda de sistemas de refrigeración y ventilación.",
+            description: "Mantenimiento preventivo y general para todos sus equipos.",
           },
           {
             name: "Revisión de componentes",
@@ -300,6 +300,14 @@ export const translations = {
       success: "¡Solicitud enviada con éxito!",
       error: "Error al enviar la solicitud. Por favor, intenta nuevamente.",
       sending: "Enviando...",
+      serviceOptions: {
+        airConditioning: "Aires acondicionados",
+        commercial: "Línea comercial",
+        domestic: "Línea hogar",
+        industrial: "Línea industrial",
+        maintenance: "Mantenimiento",
+        emergency: "Emergencia",
+      },
     },
     footer: {
       description:
@@ -526,7 +534,7 @@ export const translations = {
           },
           {
             name: "Equipment cleaning",
-            description: "Deep cleaning of refrigeration and ventilation systems.",
+            description: "Preventive and general maintenance for all your equipment.",
           },
           {
             name: "Component review",
@@ -608,6 +616,14 @@ export const translations = {
       success: "Request sent successfully!",
       error: "Error sending request. Please try again.",
       sending: "Sending...",
+      serviceOptions: {
+        airConditioning: "Air conditioning",
+        commercial: "Commercial line",
+        domestic: "Domestic line",
+        industrial: "Industrial line",
+        maintenance: "Maintenance",
+        emergency: "Emergency",
+      },
     },
     footer: {
       description: "Professional repair of industrial and domestic equipment. Reliable service for over 10 years.",

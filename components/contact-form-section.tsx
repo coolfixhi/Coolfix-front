@@ -100,12 +100,12 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
   }
 
   const services = [
-    "Aires acondicionados",
-    "Línea comercial",
-    "Línea hogar",
-    "Línea industrial",
-    "Mantenimiento",
-    "Emergencia",
+    { value: "airConditioning", label: t.contactForm.serviceOptions.airConditioning },
+    { value: "commercial", label: t.contactForm.serviceOptions.commercial },
+    { value: "domestic", label: t.contactForm.serviceOptions.domestic },
+    { value: "industrial", label: t.contactForm.serviceOptions.industrial },
+    { value: "maintenance", label: t.contactForm.serviceOptions.maintenance },
+    { value: "emergency", label: t.contactForm.serviceOptions.emergency },
   ]
 
   return (
@@ -184,8 +184,8 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
                     </SelectTrigger>
                     <SelectContent>
                       {services.map((service) => (
-                        <SelectItem key={service} value={service}>
-                          {service}
+                        <SelectItem key={service.value} value={service.value}>
+                          {service.label}
                         </SelectItem>
                       ))}
                     </SelectContent>
