@@ -2,6 +2,7 @@
 
 import { Facebook, Instagram, Mail, Phone } from "lucide-react"
 import { toast } from "sonner"
+import { TikTokIcon } from "@/components/ui/tiktok-icon"
 import type { TranslationKey } from "@/lib/translations"
 
 interface FooterProps {
@@ -15,13 +16,18 @@ export function Footer({ t }: FooterProps) {
   const socialLinks = [
     {
       icon: Facebook,
-      href: "https://www.facebook.com/share/1721huCFZU/?mibextid=wwXIfr",
+      href: "https://www.facebook.com/share/1CBPpnCLhy/?mibextid=wwXIfr",
       label: "Facebook",
     },
     {
       icon: Instagram,
       href: "https://www.instagram.com/coolfix_h.i?igsh=MXd2aWM0MTVkazd1Yg%3D%3D&utm_source=qr",
       label: "Instagram",
+    },
+    {
+      icon: TikTokIcon,
+      href: "https://www.tiktok.com/@coolfixhei?_r=1&_t=ZS-93sUWAnidKk",
+      label: "TikTok",
     },
   ]
 

@@ -236,7 +236,7 @@ export const translations = {
       },
       fast: {
         title: "Respuesta rápida",
-        description: "Atendemos su llamada en menos de 30 minutos.",
+        description: "Atendemos su solicitud con prontitud y eficiencia.",
       },
       guarantee: {
         title: "Garantía total",
@@ -544,7 +544,7 @@ export const translations = {
       },
       fast: {
         title: "Fast response",
-        description: "We answer your call in less than 30 minutes.",
+        description: "We attend to your request promptly and efficiently.",
       },
       guarantee: {
         title: "Total guarantee",
