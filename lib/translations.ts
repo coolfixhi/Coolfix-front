@@ -232,7 +232,7 @@ export const translations = {
       subtitle: "La mejor opción para el cuidado de sus equipos.",
       certified: {
         title: "Técnicos certificados",
-        description: "Personal altamente capacitado y certificado.",
+        description: "Personal altamente capacitado y certificado por LG.",
       },
       fast: {
         title: "Respuesta rápida",
@@ -248,7 +248,7 @@ export const translations = {
       },
       emergency: {
         title: "Servicio de emergencia",
-        description: "Disponibles 24/7 para emergencias críticas.",
+        description: "Horario extendido hasta las 8pm.",
       },
     },
     testimonials: {
@@ -281,7 +281,7 @@ export const translations = {
       saturdayTime: "8:00 AM - 2:00 PM",
       sunday: "Domingo",
       sundayTime: "Solo Emergencias",
-      emergency: "Servicio de emergencia 24/7 disponible",
+      emergency: "Horario extendido hasta las 8pm",
     },
     contactForm: {
       title: "Solicitar servicio",
@@ -292,6 +292,10 @@ export const translations = {
       serviceType: "Tipo de Servicio",
       selectService: "Seleccione un servicio",
       description: "Descripción del Problema",
+      acceptDataTreatment: "Acepto el tratamiento de datos personales según la",
+      dataPolicy: "Política de Tratamiento de Datos Personales",
+      acceptPromotions: "Acepto recibir promociones y comunicaciones comerciales por correo electrónico",
+      dataTreatmentRequired: "Debes aceptar el tratamiento de datos personales para enviar la solicitud",
       submit: "Enviar Solicitud",
       success: "¡Solicitud enviada con éxito!",
       error: "Error al enviar la solicitud. Por favor, intenta nuevamente.",
@@ -536,7 +540,7 @@ export const translations = {
       subtitle: "The best option for your equipment care.",
       certified: {
         title: "Certified technicians",
-        description: "Highly trained and certified personnel.",
+        description: "Highly trained and certified personnel by LG.",
       },
       fast: {
         title: "Fast response",
@@ -552,7 +556,7 @@ export const translations = {
       },
       emergency: {
         title: "Emergency service",
-        description: "Available 24/7 for critical emergencies.",
+        description: "Extended hours until 8pm.",
       },
     },
     testimonials: {
@@ -585,7 +589,7 @@ export const translations = {
       saturdayTime: "8:00 AM - 2:00 PM",
       sunday: "Sunday",
       sundayTime: "Emergencies Only",
-      emergency: "24/7 emergency service available",
+      emergency: "Extended hours until 8pm",
     },
     contactForm: {
       title: "Request service",
@@ -596,6 +600,10 @@ export const translations = {
       serviceType: "Service Type",
       selectService: "Select a service",
       description: "Problem Description",
+      acceptDataTreatment: "I accept the processing of personal data according to the",
+      dataPolicy: "Personal Data Processing Policy",
+      acceptPromotions: "I accept receiving promotions and commercial communications by email",
+      dataTreatmentRequired: "You must accept the personal data processing policy to submit the request",
       submit: "Submit Request",
       success: "Request sent successfully!",
       error: "Error sending request. Please try again.",

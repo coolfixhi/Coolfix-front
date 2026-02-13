@@ -21,9 +21,6 @@ export function HeroSection({ t }: HeroSectionProps) {
       <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-32">
         <div className="grid items-center gap-6 sm:gap-8 md:gap-12 lg:grid-cols-2">
           <div className="animate-fade-in-up">
-            <div className="mb-4 sm:mb-6 inline-block rounded-full bg-blue-100 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium text-primary">
-              {t.hero.badge}
-            </div>
             <h1 className="mb-4 sm:mb-6 text-balance text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-foreground">
               {t.hero.title} <span className="text-primary">{t.hero.titleHighlight}</span>
             </h1>

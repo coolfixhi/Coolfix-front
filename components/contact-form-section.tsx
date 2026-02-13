@@ -10,6 +10,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Send, User, Mail, Phone, Wrench, MessageSquare, Loader2 } from "lucide-react"
 import { toast } from "sonner"
+import { Checkbox } from "@/components/ui/checkbox"
 import type { TranslationKey } from "@/lib/translations"
 
 interface ContactFormSectionProps {
@@ -24,6 +25,8 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
     serviceType: "",
     description: "",
   })
+  const [acceptDataTreatment, setAcceptDataTreatment] = useState(false)
+  const [acceptPromotions, setAcceptPromotions] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -39,6 +42,15 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
       return
     }
 
+    // Validar aceptación de tratamiento de datos (OBLIGATORIO)
+    if (!acceptDataTreatment) {
+      toast.error("Aceptación requerida", {
+        description: t.contactForm.dataTreatmentRequired,
+        duration: 5000,
+      })
+      return
+    }
+
     setIsSubmitting(true)
 
     try {
@@ -47,7 +59,11 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          acceptDataTreatment,
+          acceptPromotions,
+        }),
       })
 
       const data = await response.json()
@@ -70,6 +86,8 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
         serviceType: "",
         description: "",
       })
+      setAcceptDataTreatment(false)
+      setAcceptPromotions(false)
     } catch (error) {
       console.error("Error al enviar formulario:", error)
       toast.error(t.contactForm.error, {
@@ -82,11 +100,11 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
   }
 
   const services = [
-    "Refrigeradores",
-    "Lavadoras",
-    "Secadoras",
-    "Refrigeración industrial",
-    "Mantenimiento preventivo",
+    "Aires acondicionados",
+    "Línea comercial",
+    "Línea hogar",
+    "Línea industrial",
+    "Mantenimiento",
     "Emergencia",
   ]
 
@@ -160,7 +178,7 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
                   >
                     <SelectTrigger 
                       size="default"
-                      className="w-full h-11 sm:h-12 text-sm sm:text-base transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20 border-border/60 data-[placeholder]:text-muted-foreground px-3 py-1 [&[data-size=default]]:h-11 sm:[&[data-size=default]]:h-12"
+                      className="w-full h-11 sm:h-12 text-sm sm:text-base transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20 border-border/60 data-placeholder:text-muted-foreground px-3 py-1 data-[size=default]:h-11 sm:data-[size=default]:h-12"
                     >
                       <SelectValue placeholder={t.contactForm.selectService} />
                     </SelectTrigger>
@@ -188,6 +206,42 @@ export function ContactFormSection({ t }: ContactFormSectionProps) {
                   className="min-h-[100px] sm:min-h-[120px] resize-none text-sm sm:text-base transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20 border-border/60"
                   placeholder="Describe tu problema o necesidad..."
                 />
+              </div>
+
+              {/* Checkboxes de aceptación */}
+              <div className="space-y-4 pt-2">
+                {/* Checkbox obligatorio: Tratamiento de datos */}
+                <div className="rounded-lg border border-border/50 bg-gray-50/50 p-3 sm:p-4">
+                  <Checkbox
+                    required
+                    checked={acceptDataTreatment}
+                    onChange={(e) => setAcceptDataTreatment(e.target.checked)}
+                    label={
+                      <span>
+                        {t.contactForm.acceptDataTreatment}{" "}
+                        <a
+                          href={encodeURI("/documents/POLÍTICA DE TRATAMIENTO DE DATOS PERSONALES COOLFIX.pdf")}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline font-semibold"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {t.contactForm.dataPolicy}
+                        </a>
+                        . <span className="text-destructive">*</span>
+                      </span>
+                    }
+                  />
+                </div>
+
+                {/* Checkbox opcional: Promociones */}
+                <div className="rounded-lg border border-border/50 bg-gray-50/50 p-3 sm:p-4">
+                  <Checkbox
+                    checked={acceptPromotions}
+                    onChange={(e) => setAcceptPromotions(e.target.checked)}
+                    label={t.contactForm.acceptPromotions}
+                  />
+                </div>
               </div>
 
               <div className="pt-2">

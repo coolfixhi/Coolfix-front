@@ -52,11 +52,15 @@ export function WhySection({ t }: WhySectionProps) {
               className="group animate-fade-in-up border-2 p-4 sm:p-5 transition-all duration-300 hover:border-primary hover:shadow-xl"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-2 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-primary text-white transition-transform group-hover:scale-110">
-                <feature.icon className="h-5 w-5 sm:h-6 sm:w-6" />
+              <div className="flex flex-col">
+                <div className="mb-3 flex items-center gap-3">
+                  <div className="flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full bg-primary text-white transition-transform group-hover:scale-110">
+                    <feature.icon className="h-5 w-5 sm:h-6 sm:w-6" />
+                  </div>
+                  <h3 className="text-sm sm:text-base md:text-lg font-bold text-foreground">{feature.title}</h3>
+                </div>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-snug">{feature.description}</p>
               </div>
-              <h3 className="mb-1 text-sm sm:text-base md:text-lg font-bold text-foreground">{feature.title}</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-snug">{feature.description}</p>
             </Card>
           ))}
         </div>
