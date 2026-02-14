@@ -1,6 +1,6 @@
 "use client"
 
-import { Facebook, Instagram, Mail, Phone } from "lucide-react"
+import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react"
 import { toast } from "sonner"
 import { TikTokIcon } from "@/components/ui/tiktok-icon"
 import type { TranslationKey } from "@/lib/translations"
@@ -108,6 +108,16 @@ export function Footer({ t }: FooterProps) {
                   title="Haz clic para copiar"
                 >
                   {whatsappNumber}
+                </span>
+              </div>
+
+              {/* Ubicación */}
+              <div className="flex items-center gap-3 text-sm sm:text-base text-gray-300">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-800">
+                  <MapPin className="h-4 w-4" />
+                </div>
+                <span className="hover:text-white transition-colors">
+                  {t.footer.location}
                 </span>
               </div>
             </div>

@@ -281,7 +281,7 @@ export const translations = {
       saturdayTime: "8:00 AM - 2:00 PM",
       sunday: "Domingo",
       sundayTime: "Solo Emergencias",
-      emergency: "Horario extendido hasta las 8pm",
+      emergency: "Para emergencias: Horario extendido hasta las 8pm",
     },
     contactForm: {
       title: "Solicitar servicio",
@@ -312,6 +312,7 @@ export const translations = {
     footer: {
       description:
         "Reparación profesional de equipos industriales y domésticos. Servicio confiable desde hace más de 10 años.",
+      location: "Área metropolitana y sus alrededores.",
       rights: "Todos los derechos reservados.",
     },
   },
@@ -597,7 +598,7 @@ export const translations = {
       saturdayTime: "8:00 AM - 2:00 PM",
       sunday: "Sunday",
       sundayTime: "Emergencies Only",
-      emergency: "Extended hours until 8pm",
+      emergency: "For emergencies: Extended hours until 8pm",
     },
     contactForm: {
       title: "Request service",
@@ -627,6 +628,7 @@ export const translations = {
     },
     footer: {
       description: "Professional repair of industrial and domestic equipment. Reliable service for over 10 years.",
+      location: "Metropolitan area and surroundings.",
       rights: "All rights reserved.",
     },
   },
