@@ -64,7 +64,7 @@ export function ServicesSection({ t }: ServicesSectionProps) {
         title: item.name,
         description: item.description,
         image: index === 0 ? "/img/MT1.jpeg" : 
-               index === 1 ? "/img/MT3.jpeg" : 
+               index === 1 ? "/img/limpiezaE.jpeg" : 
                "/img/MT2.jpeg"
       }))
     }
@@ -130,7 +130,7 @@ export function ServicesSection({ t }: ServicesSectionProps) {
           id: "industrial-laundry",
           title: t.services.industrial.laundry.title,
           description: t.services.industrial.laundry.description,
-          image: "/img/LI1.jpeg"
+          image: "/img/lavanderia.jpeg"
         },
         {
           id: "industrial-refrigeration",
